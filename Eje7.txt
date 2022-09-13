@@ -1,0 +1,88 @@
+// Online C# Editor for free
+
+// Write, Edit and Run your C# code using C# Online Compiler
+
+
+using System;
+
+
+public class HelloWorld
+
+{
+    
+/*
+    Ejercicio 7:
+    Escribe el programa para un juego que consista en averiguar un número. El programa nos
+    indicará cada vez si el número introducido es mayor o menor que la constante almacenada que
+    tendremos que averiguar. Cuando se descubre el numero mostrara un mensaje de felicitación.
+    */
+
+    public static void Main(string[] args)
+
+    {
+
+//Ajustes del juego
+
+        const int min = 1;// Limite Inferior
+        const int max = 11;//Limite Superior, el random siempre es un numero menor al maximo
+
+        const int intentosmax=5;//Limite de intentos
+
+        Random r= new Random();
+
+        int secreto=r.Next(min,max);//Obtener un numero aleatorio que no le diremos al usuario
+
+//Descomenta esta linea para hacer trampa
+//
+        Console.WriteLine("El numero secreto es: "+secreto);
+
+        int respuesta=0,intentos=0;
+
+        Console.WriteLine("He seleccionado un numero al azar entre "+min+" y "+10+" tu tarea es adivinarlo en maximo de "+intentosmax+" intentos\n");
+
+//Ciclo infinito
+
+for(;;){
+
+    
+    intentos++;
+
+    Console.WriteLine("Escribe el numero que crees que eligi: \n");
+
+    respuesta=Convert.ToInt32(Console.ReadLine());
+
+    if(respuesta==secreto){
+
+        Console.WriteLine("Correcto. El numero que seleccione fue "+secreto+" y lo adivinaste en "+intentos+" intentos\n");
+
+        break;
+
+    }else if(respuesta< secreto){
+
+        Console.WriteLine("Error, pero te doy una pista: el numero que elegi es mayor que: "+respuesta+"\n");
+
+    }else{
+
+        // respuesta > secreto
+
+        Console.WriteLine("Error, pero te doy una pista el numero es menor que :"+respuesta+"\n");
+
+
+    }
+
+    // Si no se rompio arriba porque gano, y ya se superaron o igualaron los intentos, entonces se rompe y se indica que perdio
+
+    if(intentos >= intentosmax){
+
+    Console.WriteLine("Perdiste. El numero que elegi es: "+secreto);
+
+    break;
+
+}
+
+}
+
+
+    }
+
+}

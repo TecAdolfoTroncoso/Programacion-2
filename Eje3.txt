@@ -1,0 +1,90 @@
+// Online C# Editor for free
+
+// Write, Edit and Run your C# code using C# Online Compiler
+
+
+using System;
+
+
+public class HelloWorld
+
+{
+    
+	public static void Main(string[] args)
+    
+	{
+         
+	/*
+    Ejercicio 3
+
+	Escribe un programa que calcule el factorial de n donde n es un número entero mayor o
+igual que cero dado por el usuario.
+
+    */
+            
+            int factorial;
+			
+            int i;
+			
+            int n;
+			
+            string procedimiento;
+			
+            // Calcular el factorial de un número.
+			
+            Console.WriteLine("Ingrese un numero (Natural)");
+			
+            n = Convert.ToInt32(Console.ReadLine());
+			
+            while (n<0) {
+				
+            	Console.WriteLine("Error: numero mal ingresado, Ingrese un número (Natural),(>=0)");
+				
+            	n = Convert.ToInt32(Console.ReadLine());
+			
+            }
+			
+            factorial = 1;
+			
+            procedimiento = "";
+			
+            // n<=1
+			
+            if (n==0 || n==1) {
+				
+            	Console.WriteLine("--------------------FACTORIAL--------------------");
+				
+            	Console.WriteLine(n+"! = "+1);
+				
+            	Console.WriteLine("-------------------------------------------------");
+			
+            } else {
+				
+            	for (i=1;i<=n;i++) {
+					
+            		factorial = factorial*i;
+					
+            		if (i<n) {
+						
+            			procedimiento = procedimiento+Convert.ToString(i)+" x ";
+					
+            		} else {
+						
+            			procedimiento = procedimiento+Convert.ToString(i);
+					
+                        }
+				
+                       }
+				
+                        Console.WriteLine("--------------------FACTORIAL--------------------");
+				
+                        Console.WriteLine(n+"! = "+procedimiento+" = "+factorial);
+				
+                        Console.WriteLine("-------------------------------------------------");
+			
+                    }
+      
+    
+            }
+
+}

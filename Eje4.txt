@@ -1,0 +1,66 @@
+// Online C# Editor for free
+
+// Write, Edit and Run your C# code using C# Online Compiler
+
+
+using System;
+
+public class HelloWorld
+
+{
+    
+    public static void Main(string[] args)
+    
+    {
+         
+    /*
+    Ejercicio 4
+    
+    Escribe un programa que escriba todos los divisores de un número n entero positivo
+    introducido por el usuario.
+
+
+    */
+			
+			int i;
+			
+			int n;
+			
+			string procedimiento;
+			
+			// Calcular los divisores de un número.
+			
+			Console.WriteLine("Ingrese un numero (Natural)");
+			
+			n = Convert.ToInt32(Console.ReadLine());
+			
+			while (n<=0) {
+				
+				Console.WriteLine("Error: numero mal ingresado, Ingrese un numero (Natural),(>=0)");
+				
+				n = Convert.ToInt32(Console.ReadLine());
+			
+			}
+			
+			procedimiento = "\n\t\t\tDivisores\n";
+				
+				for (i=1;i<=n;i++) {
+					
+					if (n%i==0) {
+						
+						procedimiento = procedimiento+Convert.ToString(i)+" / ";
+					
+				}
+				
+			}
+				
+			Console.WriteLine("--------------------Divisores--------------------");
+				
+			Console.WriteLine("Numero Seleccionado: "+n+"  "+procedimiento);
+				
+			Console.WriteLine("-------------------------------------------------");
+			
+		}
+      
+  
+  	}

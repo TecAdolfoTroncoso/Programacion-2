@@ -1,0 +1,62 @@
+// Online C# Editor for free
+
+// Write, Edit and Run your C# code using C# Online Compiler
+
+
+using System;
+
+
+public class HelloWorld
+
+{
+    
+    public static void Main(string[] args)
+    
+    {
+         
+/*
+    Ejercicio 5
+    Escribe un programa que escriba la tabla de multiplicar de cualquier número entero dado
+    por el usuario, entre 1 y 10.
+
+
+    */
+			
+			int i;
+			
+			int n=0;
+			
+			string procedimiento;
+			
+			// Calcular las tablas de un número.
+			
+			Console.WriteLine("Ingrese un numero (Natural)");
+			
+			n = Convert.ToInt32(Console.ReadLine());
+			
+			while (n>10) {
+				
+				Console.WriteLine("Error: numero mal ingresado, Ingrese un numero (Natural),(<=10)");
+				
+				n = Convert.ToInt32(Console.ReadLine());
+			
+			}
+			
+			procedimiento = "\n\t\t\tTabla\n";
+				
+				for (i=1;i<=10;i++) {
+						
+					procedimiento = procedimiento+Convert.ToString(i)+" * "+n+" ="+i*n+"\n";
+				
+				}
+				
+				Console.WriteLine("--------------------Tablas--------------------");
+				
+				Console.WriteLine("Numero Seleccionado: "+n+"  "+procedimiento);
+				
+				Console.WriteLine("-------------------------------------------------");
+			
+		}
+      
+    
+	}

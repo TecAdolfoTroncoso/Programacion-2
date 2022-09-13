@@ -1,0 +1,79 @@
+// Online C# Editor for free
+
+// Write, Edit and Run your C# code using C# Online Compiler
+
+
+using System;
+
+
+public class HelloWorld
+
+{
+
+    public static void Main(string[] args)
+
+    {
+         
+/*
+    Ejercicio 6
+    Escribe un programa que calcule la suma de todos los números múltiplos de 5
+    comprendidos entre dos enteros positivos leídos por teclado
+    */
+
+			int i;
+
+			int n1=0,n2=0,sumatoria=0;
+
+			string procedimiento;
+
+			// Sumatoria de los numeros
+
+			Console.WriteLine("Ingrese el primer numero (Natural)");
+
+			n1 = Convert.ToInt32(Console.ReadLine());
+
+			Console.WriteLine("Ingrese el segundo numero (Natural)");
+
+			n2 = Convert.ToInt32(Console.ReadLine());
+
+			while ((n1<0)||(n2<0)) {
+
+				Console.WriteLine("Error: Uno de los numero fue mal ingresado, Por favor ingrese nuevamente los numeros (Natural),(>=0)");
+
+				n1 = Convert.ToInt32(Console.ReadLine());
+
+				n2 = Convert.ToInt32(Console.ReadLine());
+
+			}
+
+			sumatoria=n1+n2;
+
+            Console.WriteLine("\t\t\tLos Numeros Seleccionados fueron:\n"+"Primer numero: "+n1+"\nSegundo Numero: "+n2+"\nSe buscaran los multiplos de 5 hasta el numero: "+sumatoria);
+
+			procedimiento = "\n\t\t\tMultiplos de 5\n";
+
+				for (i=1;i<=sumatoria;i++) {
+
+				    if(i%5==0){
+
+						procedimiento = procedimiento+Convert.ToString(i)+"\n";
+
+				        
+				    }else{
+
+				    //Console.WriteLine("No se han podido encontrar multiplos de 5 hasta el numero seleccionado");
+
+				}
+
+				}
+
+				Console.WriteLine("-------------------------------------------------");
+
+				Console.WriteLine("Numero Seleccionado: "+sumatoria+"  "+procedimiento);
+
+				Console.WriteLine("-------------------------------------------------");
+
+			}
+
+      
+    }

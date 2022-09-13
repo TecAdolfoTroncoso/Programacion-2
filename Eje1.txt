@@ -1,0 +1,71 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+public class Ejercicio1
+{
+    public static void Main(string[] args)
+    {
+        /*Ejercicio 1
+        Escribe un programa que tome 3 números enteros introducidos por el usuario mediante el
+        teclado y determine cuántos de dichos números son diferentes, el promedio, la suma de
+        todos, el producto del mayor por el menor y si el número restante es divisible por 3.*/
+        
+        // Definicion de arreglo vacio con tamaño de 3
+        int[] numeros = new int[3];
+        //Declaracion de variables
+        int suma=0,comprobador=0,producto=0;
+        float promedio=0;
+        
+        //Limpiando el array (Por las dudas)
+       for (int i =0;i<3;i++){
+            numeros[i]=0;
+        }
+        // LLeno el arreglo atraves de la consola
+        for(int i=0;i<3;i++){
+            Console.WriteLine("=======================================");
+            Console.WriteLine("Ingrese los numeros a analizar");
+            Console.WriteLine("=======================================");
+            numeros[i]=Convert.ToInt32(Console.ReadLine());
+        //Sumo los numeros introducidos en el array    
+            suma =suma+numeros[i];
+        //Saco el promedio de los numeros introducidos en el array    
+            promedio=(float)suma/3;
+            }
+        // Comprobacion si son numeros iguales
+        for(int i=1;i<3;i++){
+            comprobador=numeros[0];
+            if(numeros[i]!=comprobador){
+                Console.WriteLine("El numero: "+numeros[i]+" es diferente a: "+comprobador);
+            }else{
+                Console.WriteLine("El numero: "+numeros[i]+" es igual a: "+comprobador);
+            }
+        }
+        //Busco el Mayor y menor
+        int mayor=numeros[0];
+        int menor=numeros[0];
+        for(int i=0;i<3;i++){
+            if (numeros[i]>mayor){
+                mayor=numeros[i];
+            } 
+            if (numeros[i]<menor){
+             menor=numeros[i];
+            }
+        }
+        producto=mayor*menor;
+        
+        //Salidas de texto y resultados
+        Console.WriteLine("El promedio de la suma de todos los numeros es: "+promedio);
+        Console.WriteLine("La suma de los numeros es: "+suma);
+        Console.WriteLine("El numero mayor es: "+mayor+" y el numero menor es: "+menor);
+        Console.WriteLine("El producto de: "+mayor+" y "+menor+" es igual a: "+mayor*menor);
+        //Calculo si es divisible por 3
+        if(producto % 3 == 0){
+            Console.WriteLine("El numero: "+producto+" es divisible por 3");
+        }else{
+            Console.WriteLine("El numero: "+producto+" no es divisible por 3");
+        }
+        }
+    
+    }
